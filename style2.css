@@ -1,0 +1,213 @@
+
+/*  */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/*  */
+
+@font-face {
+    font-family: 'Android';
+    src: url('pacote-projeto-d010/fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+/*  */
+:root { 
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: "Bebas Neue", sans-serif;
+    --fonte-Android: 'Android', 'cursive';
+}
+/*  */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+
+a.externo::after { /* significa que : todos os links da class .externo :: depois dele */
+    content: '\1F517'; /* codigo para corrente de link externo */
+}
+
+header {
+    background-image: linear-gradient( to bottom, var(--cor3), var(--cor5));  /* gradiente do header */
+    min-width: 150px; /*responsivo */
+    text-align: center;
+    padding-top: 40px; /* afastar o h1 da borda de cima */
+}
+
+/*  */
+header h1 {
+    color: white;
+    font-family: var(--fonte-destaque);
+    margin-bottom: 20px; /* afastar o h1 do p */
+    font-size: 3em;
+    font-weight: normal;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.455);
+}
+/*  */
+header > p {
+    color: white;
+    font-size: 1.2em;
+    max-width: 500px; /* quando determina essa largura o P vira um bloco, e pra centralizar usa-se margin:auto; */
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.455);
+}
+/*  */
+nav {
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.426);
+}
+
+nav a {
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .6s;
+}
+
+nav a:hover {
+    background-color: var(--cor3);
+    color: var(--cor5);
+}
+
+/*  */
+main {
+    min-width: 300px; /* para deixar responsivo */
+    max-width: 1000px;
+    margin: auto; /* centralizar a caixa main */
+    margin-bottom: 30px; /* afastar do footer */
+    padding: 20px; /* espaçamento entre a borda e a letra */
+    background-color:white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.46); /* sombreamento da caixa main */
+    border-radius: 0px 0px 10px 10px;
+}
+/*  */
+main h1 {
+    color: var(--cor5);
+    font-family: var(--fonte-Android);
+}
+/*  */
+main h2 {
+    font-family: var(--fonte-Android);
+    color: var(--cor4);
+    font-size: 1.3em; /* tamanho da fonte */
+    background-image: linear-gradient(to right, var(--cor1), transparent); /* gradiente do verde ate o transparente */
+    text-indent: 8px; /* espacamento do paragrafo */
+    font-weight: normal
+}
+
+main p {
+    margin: 15px 0px; /* espaço entre um paragrafo e outro */
+    text-align: justify; /* o paragrafo ficar completo dos lados */
+    text-indent: 30px; /* recuo do paragrafo */
+    font-size: 1em; /* tamanho da letra */
+    line-height: 2em; /* altura entre uma linha e outra */
+}
+
+main strong {
+    color: var(--cor4);
+    font-weight: bold;
+}
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px 6px;
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor4);
+}
+
+main img {
+    width: 100%; /* para deixar responsivo */
+}
+
+main img.pequena {
+    max-width: 350px;
+    display: block; /* imagens nao são blocos, usa-se display:block; para transdormar em bloco e conseguir centralizar usando margin:auto; */
+    margin: auto;
+}
+
+div.video {
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+
+    padding-bottom: 56%;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5% ;
+    left: 5% ;
+    width: 90%;
+    height: 90%;
+}
+
+/*  */
+aside {
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.174);
+}
+/*  */
+aside h3 {
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;/* vai crescer a barra verde escura para colar com a aside */ 
+    border-radius: 10px 10px 0px 0px;
+}
+/*  */
+aside ul {
+    list-style-type: '\2714\00A0\00A0'; /* colocar o sinal de certo usa-se as aspas '' e barra invertida \ e o codigo de check que é 2714. o \00A0 é o espaço entre o sinal e as letras usando 2x vai ter 2x o espaço */
+    list-style-position: inside;  /* as bolinhas das ul ficam dentro da aside */
+    columns: 2; /* dividir em duas colunas */
+
+}
+
+/* 1F517 */
+footer {
+    text-align: center;
+    text-decoration: none;
+    font-size: .8em;
+    background-color: var(--cor5);
+    color: var(--cor0);
+    padding: 5px;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--cor0);
+    padding: 2px 6px;
+    
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: var(--cor1);
+    
+}
+
+
+footer:be
